@@ -7,7 +7,7 @@ VERSION = "0.0.1"
 SHORT_DESCRIPTION = "getting xyz files"
 SOURCE_CODE_LINK= "https://github.com/Ben-Payton/get_molecule_xyz"
 DOCUMENTATION_LINK = "https://github.com/Ben-Payton/get_molecule_xyz/blob/main/README.md" 
-REQUIRED_DEPENDANCIES = []
+REQUIRED_DEPENDANCIES = ["nistchempy","rdkit","pandas"]
 
 
 setuptools.setup(
