@@ -5,7 +5,7 @@ import pathlib
 PROJECT_NAME = "get_molecule_xyz"
 VERSION = "0.0.1"
 SHORT_DESCRIPTION = "getting xyz files"
-SOURCE_CODE_LINK= "https://github.com/Ben-Payton/repo_name"
+SOURCE_CODE_LINK= "https://github.com/Ben-Payton/get_molecule_xyz"
 DOCUMENTATION_LINK = "https://github.com/Ben-Payton/get_molecule_xyz/blob/main/README.md" 
 REQUIRED_DEPENDANCIES = []
 
