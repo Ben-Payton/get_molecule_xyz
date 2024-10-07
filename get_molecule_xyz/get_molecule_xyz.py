@@ -9,7 +9,7 @@ import pandas
 # 
 ####################################################################################################
 
-def cas_to_xyz(xyz_title:str,cas_number:str) -> None:
+def cas_to_xyz(xyz_title:str,cas_number:str) -> str:
     """ creates an xyz file from a given cas_number if the xyz file is available
 
     Parameters
@@ -20,7 +20,7 @@ def cas_to_xyz(xyz_title:str,cas_number:str) -> None:
 
     Returns
     -------
-        None
+        str describing the success
         Creates an xyz file for a molecule if it can be found 
     """
     molecule = nistchempy.get_compound(cas_number)
@@ -28,12 +28,11 @@ def cas_to_xyz(xyz_title:str,cas_number:str) -> None:
         molecule.get_mol3D()
         if molecule.mol3D != None:
             molecule = Chem.MolToXYZFile(xyz_title+".xyz")
-            print(xyz_title+".xyz", "created")
+            return xyz_title+".xyz created"
         else:
-            print(xyz_title+".xyz failed.\n\tno mol3d found.")
+            return xyz_title+".xyz failed\n\tno mol3d found"
     else:
-        xyz_title+".xyz failed.\n\tcas not found."
-    pass
+        return xyz_title+".xyz failed\n\tcas not found"
 
 
 # ToBeImplemented
