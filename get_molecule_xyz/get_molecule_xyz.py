@@ -1,4 +1,6 @@
-#write code here
+import nistchempy
+from rdkit import Chem
+import pandas
 
 # ToBeImplemented
 ####################################################################################################
@@ -21,6 +23,16 @@ def cas_to_xyz(xyz_title:str,cas_number:str) -> None:
         None
         Creates an xyz file for a molecule if it can be found 
     """
+    molecule = nistchempy.get_compound(cas_number)
+    if molecule != None:
+        molecule.get_mol3D()
+        if molecule.mol3D != None:
+            molecule = Chem.MolToXYZFile(xyz_title+".xyz")
+            print(xyz_title+".xyz", "created")
+        else:
+            print(xyz_title+".xyz failed.\n\tno mol3d found.")
+    else:
+        xyz_title+".xyz failed.\n\tcas not found."
     pass
 
 
