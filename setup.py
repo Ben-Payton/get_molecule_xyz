@@ -2,11 +2,11 @@ import setuptools
 
 import pathlib
 
-PROJECT_NAME = "your_project_name"
-VERSION = "0.0.0"
-SHORT_DESCRIPTION = "useful python tools that I use to streamline my work."
+PROJECT_NAME = "get_molecule_xyz"
+VERSION = "0.0.1"
+SHORT_DESCRIPTION = "getting xyz files"
 SOURCE_CODE_LINK= "https://github.com/Ben-Payton/repo_name"
-DOCUMENTATION_LINK = "https://github.com/Ben-Payton/ben_sci_tools/blob/main/README.md" 
+DOCUMENTATION_LINK = "https://github.com/Ben-Payton/get_molecule_xyz/blob/main/README.md" 
 REQUIRED_DEPENDANCIES = []
 
 
