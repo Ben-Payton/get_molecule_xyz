@@ -57,8 +57,14 @@ def cascsv_to_xyz(csv_filename:str,xyz_file_column_label:str,cas_column_label:st
     Returns
     -------
         None
-        Creates an xyz file for each molecule in a csv it can be found 
+        Creates an xyz file for each molecule in a csv it can be found. Also modifies csv fead in. 
     """
+    df = pandas.read_csv(csv_filename)
+    results_strings = []
+    for index, row in df.iterrows():
+        results_strings.append(cas_to_xyz(row[xyz_file_column_label],row[cas_column_label]))
+    df["results_of_create_xyz"] = results_strings
+    df.to_csv(index=False)
     pass
 
 
